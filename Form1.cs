@@ -31,13 +31,12 @@ namespace _1__Intro
                 {
                     MessageBox.Show("Please fill in all empty fields!", "Error!", MessageBoxButtons.OK ,MessageBoxIcon.Exclamation);
                     isEmpty = true;
-                    break;
+                    return;
+                    
                 }
+
             }
-
-
-            if (isEmpty == false)
-            {
+            
                 int minNumber = int.Parse(minTextBox.Text);
                 int maxNumber = int.Parse(maxTextBox.Text);
 
@@ -75,8 +74,7 @@ namespace _1__Intro
                         }
 
                     }
-                } while (!isGuedded);
-            }
+                } while (!isGuedded);          
         }
     }
 }
